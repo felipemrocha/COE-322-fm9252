@@ -4,7 +4,6 @@ kind: Deployment
 metadata:
   name: frocha-test-redis-database
   labels:
-    app: frocha-test-redis
     username: frocha
     env: test
     project: hw6
@@ -17,7 +16,6 @@ spec:
   template:
     metadata:
       labels:
-        app: hello-app
         username: frocha
         env: test
         project: hw6
