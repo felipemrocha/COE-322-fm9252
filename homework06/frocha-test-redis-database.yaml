@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frocha-test-redis-database
+  labels:
+    app: frocha-test-redis
+    username: frocha
+    env: test
+    project: hw6
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: hw6
+  template:
+    metadata:
+      labels:
+        app: hello-app
+        username: frocha
+        env: test
+        project: hw6
+        app: redis
+    spec:
+      containers:
+        - name: hellos
+          image: redis:5.0.0
+          volumeMounts:
+          - name: frocha-test-redis-container
+            mountPath: "/data"
+      volumes:
+      - name: frocha-test-redis-container
+        persistentVolumeClaim:
+          claimName: frocha-test-redis-container

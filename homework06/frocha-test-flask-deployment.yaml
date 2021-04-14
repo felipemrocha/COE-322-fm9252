@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frocha-test-flask-deployment
+  labels:
+    app: frocha-test-flask
+    username: frocha
+    env: test
+    project: hw6
+    app: flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: hw6
+  template:
+    metadata:
+      labels:
+        app: frocha-test-flask
+        username: frocha
+        env: test
+        project: hw6
+        app: flask
+    spec:
+      containers:
+        - name: frocha-test-flask-deployment
+          imagePullPolicy: Always
+          image: frocha/animals
+          env:
+          - name: FLASK_APP_HW6
+            value: "app.py"
+          - name: REDIS_IP
+            value: "redis_ip"
+          ports:
+          - name: http
+            containerPort: 5000
