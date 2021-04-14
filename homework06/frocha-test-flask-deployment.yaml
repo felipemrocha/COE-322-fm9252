@@ -4,7 +4,6 @@ kind: Deployment
 metadata:
   name: frocha-test-flask-deployment
   labels:
-    app: frocha-test-flask
     username: frocha
     env: test
     project: hw6
@@ -17,7 +16,6 @@ spec:
   template:
     metadata:
       labels:
-        app: frocha-test-flask
         username: frocha
         env: test
         project: hw6
