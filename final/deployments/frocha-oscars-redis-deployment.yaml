@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frocha-oscars-redis-deployment
+  labels:
+    app1: frocha-oscars-redis
+    username: frocha
+    env: oscars
+    project: final
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: final
+  template:
+    metadata:
+      labels:
+        app1: frocha-oscars-redis
+        username: frocha
+        env: oscars
+        project: final
+        app: redis
+    spec:
+      containers:
+        - name: frocha-oscars-flask
+          image: redis:5.0.0
+          volumeMounts:
+          - name: frocha-oscars-redis-pvc
+            mountPath: "/data"
+      volumes:
+      - name: frocha-oscars-redis-pvc
+        persistentVolumeClaim:
+          claimName: frocha-oscars-redis-pvc

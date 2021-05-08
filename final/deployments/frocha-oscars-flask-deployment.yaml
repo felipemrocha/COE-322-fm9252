@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frocha-oscars-flask-deployment
+  labels:
+    app: frocha-oscars-flask
+    username: frocha
+    env: oscars
+    project: final
+    app: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: final
+  template:
+    metadata:
+      labels:
+        app1: frocha-oscars-flask
+        username: frocha
+        env: oscars
+        project: final
+        app: flask
+    spec:
+      containers:
+        - name: frocha-oscars-flask-deployment
+          imagePullPolicy: Always
+          image: felipemrocha/oscars:latest
+          command: ["python", "app.py"] 
+          env:
+          - name: FLASK_APP_FINAL
+            value: "app.py"
+          - name: REDIS_IP
+            value: "10.110.194.121"
+          ports:
+          - name: http
+            containerPort: 5000

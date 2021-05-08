@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frocha-oscars-flask-service
+  labels:
+    username: frocha
+    env: oscars
+    project: final
+    app: flask
+spec:
+  type: ClusterIP
+  selector:
+    project: final
+    app: flask
+  ports:
+  - name: frocha-oscars-flask-service
+    port: 5000
+    targetPort: 5000

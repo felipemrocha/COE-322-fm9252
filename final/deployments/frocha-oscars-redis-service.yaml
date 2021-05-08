@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frocha-oscars-redis-service
+  labels:
+    username: frocha
+    env: oscars
+    project: final
+    app: redis
+spec:
+  type: ClusterIP
+  selector:
+    project: final
+    app: redis
+  ports:
+  - name: frocha-oscars-redis-service
+    port: 6379
+    targetPort: 6379
