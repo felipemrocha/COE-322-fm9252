@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: frocha-oscars-worker-deployment
   labels:
-    app: frocha-oscars-flask
+    app: frocha-oscars-worker
     username: frocha
     env: oscars
     project: final
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        app1: frocha-oscars-flask
+        app1: frocha-oscars-worker
         username: frocha
         env: oscars
         project: final

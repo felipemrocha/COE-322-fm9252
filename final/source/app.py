@@ -4,7 +4,7 @@ from flask import request
 import json
 import redis
 import uuid
-from jobs import job, q, rd, add_job, generate_job_key
+from jobs import job, q, im, rd, add_job, generate_job_key
 
 app = Flask(__name__)
 
@@ -142,11 +142,11 @@ def jobs_api():
 
 @app.route('/check/<jid>', methods = ['GET'])
 def jobscheck(jid):
-	return jsonify(job.hgetall(f'job.{jid}'))
+	return jsonify(im.hgetall(f'job.{jid}'))
 
 @app.route('/length', methods = ['GET'])
 def queuelength():
-	return str(len(q))
+	return str(len(q))+"\n"
 
 
 @app.route('/download/<jid>', methods = ['GET'])
@@ -154,7 +154,7 @@ def jobsdownload(jid):
 	if job.hget(generate_job_key(jid),"status") == 'complete':
 		path = f'/app/{jid}.png'
 		with open(path, 'wb') as f:
-			f.write(job.hget(generate_job_key(jid), 'image'))
+			f.write(im.hget(generate_job_key(jid), 'image'))
 		return send_file(path, mimetype='image/png', as_attachment=True)
 
 	else:
