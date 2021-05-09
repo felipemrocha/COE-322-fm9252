@@ -1,4 +1,4 @@
-# Oscar Nominees: 1928 to 2017
+# Oscar Nominees: 1927 to 2017
 COE332 Final Project -  Felipe Martins Rocha (fm9252)
 ## 1. Deployment
 
