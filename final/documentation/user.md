@@ -275,4 +275,6 @@ https://isp-proxy.tacc.utexas.edu/<yourusername>/download/<job-id>
 #### 2.6.3. Image Examples
 Below are some examples of plots that show the average length of Oscar Nominees' names across different time periods.
 
-![2.6.3.1]()
+![2.6.3.1](https://github.com/felipemrocha/COE-322-fm9252/blob/main/final/documentation/5e45c6c4-be3e-4daf-b2ca-1a65675d9b1c.png)
+
+![2.6.3.2](https://github.com/felipemrocha/COE-322-fm9252/blob/main/final/documentation/be1327ce-ccfe-429f-a585-b9010e7e0e44.png)
