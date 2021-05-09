@@ -261,7 +261,7 @@ You can use a command to download the image to your current folder and later mov
 
 # scp output.png yourusername@isp02.tacc.utexas.edu:~/
 yourusername@isp02.tacc.utexas.edu's password:
-output.png  
+output.png                                                                                100%   37KB  91.7KB/s   00:00
 ```
 This will transfer the image to your home on isp02. From there, you can either use 'scp' again to move it to your computer, or push it somewhere you would like.
 
