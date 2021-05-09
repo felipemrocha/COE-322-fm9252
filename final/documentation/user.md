@@ -1,4 +1,4 @@
-# Oscar Nominees: 1928 to 2017
+# Oscar Nominees: 1927 to 2017
 COE332 Final Project -  Felipe Martins Rocha (fm9252)
 
 If you have already deployed your container, you are ready to curl routes and do operations in the Oscars database. If your Kubernetes clusters aren't deployed, go to [Deployment](https://github.com/felipemrocha/COE-322-fm9252/blob/main/final/documentation/deployment.md).
