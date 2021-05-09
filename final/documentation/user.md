@@ -254,7 +254,7 @@ What is being returned is the dictionairy for your job request, so you will need
 
 You can use a command to download the image to your current folder and later move it around your isp02 directory.
 ```console
-curl 10.244.13.225:5000/download/"5ad09127-7c00-48d3-9dfa-71075e2a95cd" >output.png
+# curl 10.244.13.225:5000/download/"5ad09127-7c00-48d3-9dfa-71075e2a95cd" >output.png
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 38173  100 38173    0     0  1863k      0 --:--:-- --:--:-- --:--:-- 2071k
