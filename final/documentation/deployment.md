@@ -49,7 +49,7 @@ $ kubectl apply -f python-debug.yaml
   deployment.apps/python-debug-deployment created
 ```
 
-You're all set! When you exec into the flask deployment you should be able to use all the routes in the database. For more information go to: [User](google.com).
+You're all set! When you exec into the flask deployment you should be able to use all the routes in the database. For more information go to: [User](https://github.com/felipemrocha/COE-322-fm9252/blob/main/final/documentation/user.md).
 
 
 
